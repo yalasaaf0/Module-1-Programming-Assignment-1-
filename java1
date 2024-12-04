@@ -1,0 +1,25 @@
+public class VariableScopeExamples {
+
+    public static void main(String[] args) {
+        method1();
+        method2();
+    }
+
+    public static void method1() {
+        // x's scope is within method1 only
+        int x = 1; 
+        for (int i = 1; i <= 10; i++) {
+            x += i;
+        }
+        System.out.println("Value of x after loop: " + x);
+    }
+
+    public static void method2() {
+        // sum's scope is throughout method2
+        int sum = 0; 
+        for (int i = 1; i <= 10; i++) {
+            sum += i;
+        }
+        System.out.println("Total sum in method2: " + sum);
+    }
+}
